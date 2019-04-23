@@ -5,8 +5,8 @@
 	<style>
 		#slider_princ {
 			position: absolute;
-			width: 80%;
-			height: 50%;
+			width: 1300px;
+			height: 500px;
 			top: 50px;
 			right: 50px;
 			overflow: hidden;
@@ -19,35 +19,37 @@
 		}
 
 		#img_1{
-			background: red;
+			width: 1300px;
 
 		}
 
 		#img_2 {
-			background: green;	
+			width: 1300px;	
 		}
 
 		#img_3 {
-			background: blue;
+			width: 1300px;
+			height: 500px;
 		}
 	</style>
 </head>
 <body>
 	<div id="slider_princ">
-		<div id="img_1" class="img"></div>
-		<div id="img_2" class="img"></div>
-		<div id="img_3" class="img"></div>
+		<div class="img"><img src="img1.jpg" id="img_1"></div>
+		<div class="img"><img src="img2.jpg" id="img_2"></div>
+		<div class="img"><img src="img3.jpg" id="img_3"></div>
 	</div>
 
 	<input type="button" value="Muevete!" onclick="mover()">
 	<script>
 		var img_3 = document.getElementById("img_3");
-		var valor = 80;
+		var valor = 1300;
+		var ancho = 500;
 		function mover() {
 			setInterval(function() {
-				img_3.style.width = valor + "%"; 
-				valor -= 1;
-
+				img_3.style.width = valor + "px"; 
+				//img_3.style.height = ancho + "px";
+				valor -= 2;
 			}, 10);	
 		}
 		
