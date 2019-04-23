@@ -39,8 +39,17 @@
 		<div id="img_3" class="img"></div>
 	</div>
 
-	<input type="button" value="Muevete!" onclick="correr()">
+	<input type="button" value="Muevete!" onclick="mover()">
 	<script>
+		var img_3 = document.getElementById("img_3");
+		var valor = 80;
+		function mover() {
+			setInterval(function() {
+				img_3.style.width = valor + "%"; 
+				valor -= 1;
+
+			}, 10);	
+		}
 		
 	</script>
 </body>
