@@ -3,52 +3,72 @@
 <head>
 	<title>Slider</title>
 	<style>
-		#slider_princ {
-			position: absolute;
-			width: 1300px;
+		/*#slider_princ {
+			position: relative;
+			width: 100%;
 			height: 500px;
-			top: 50px;
-			right: 50px;
 			overflow: hidden;
 		}
 
-		.img{
-			position: absolute;
-			width: 80%;
-			height: 200px;
+		
+		#slider_sec {
+			width: 50%;
+			display: flex;
+			/*white-space: nowrap;
 		}
-
-		#img_1{
-			width: 1300px;
-
+		
+		#img_1, #img_2, #img_3{
+			height: 300px;
+			width: 500px;
 		}
+		*/
 
-		#img_2 {
-			width: 1300px;	
-		}
+	}
+#slider_princ {
+    margin: auto;/*Margen auto para que este en el centro*/
+    width: 85%;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;/*Para que el contenido que se salga no se muestre*/
+    box-shadow: 0 0 0 10px #fff,
+                0 15px 50px;
+}
 
-		#img_3 {
-			width: 1300px;
-			height: 500px;
-		}
+#slider_sec {
+    display: flex;
+    width: 400%;
+}
+
+#slider_sec div {
+    width: 100%;
+}
+
+#slider_sec img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+		
 	</style>
 </head>
 <body>
 	<div id="slider_princ">
-		<div class="img"><img src="img1.jpg" id="img_1"></div>
-		<div class="img"><img src="img2.jpg" id="img_2"></div>
-		<div class="img"><img src="img3.jpg" id="img_3"></div>
+		<div id="slider_sec">
+			<div class="img"><img src="img_1.jpg" id="img_1"></div>
+			<div class="img"><img src="img_2.jpg" id="img_2"></div>
+			<div class="img"><img src="img_3.jpg" id="img_3"></div>
+		</div>
 	</div>
 
 	<input type="button" value="Muevete!" onclick="mover()">
 	<script>
 		var img_3 = document.getElementById("img_3");
-		var valor = 1300;
-		var ancho = 500;
+		var valor = 80;
 		function mover() {
 			setInterval(function() {
-				img_3.style.width = valor + "px"; 
-				//img_3.style.height = ancho + "px";
+				img_3.style.width = valor + "%"; 
 				valor -= 2;
 			}, 10);	
 		}
