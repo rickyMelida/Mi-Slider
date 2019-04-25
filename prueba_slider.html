@@ -2,33 +2,7 @@
 <html lang="es">
 <head>
 	<title>Slider</title>
-	<style>
-		#slider_princ {
-			width: 95%;
-			overflow: hidden;
-		}
-
-		#slider_princ #slider_sec {
-			margin: 0 20%;
-		}
-
-		#slider_sec{
-			display: flex;
-			width: 300%;
-		}
-
-		.img {
-			width: 100%;
-		}
-
-
-		#img_1, #img_2, #img_3{
-			height: 300px;
-			width: 600px;
-		}
-		
-		#img
-	</style>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 	<div id="slider_princ">
@@ -40,13 +14,6 @@
 	</div>
 
 	<input type="button" value="Muevete!" onclick="mover()">
-	<script>
-		var img_1 = document.getElementsByTagName("div")[2];
-		function mover() {
-			img_1.style.marginLeft = "10%";
-			//alert(img_1.length);
-		}
-		
-	</script>
+	<script src="design.js"></script>
 </body>
 </html>

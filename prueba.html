@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Ejemplo overflow</title>
+	<style>
+		#capa1, #capa2, #capa3, #capa4 {
+		  width: 200px;
+		  height: 200px;
+		  padding: 5px;
+		  margin: 5px;
+		  border: solid 1px #840;
+		  background: #fca;
+		  float: left;
+		  overflow: visible;
+		  font-size: 28px;
+		}
+
+		#capa2  {
+		  overflow: hidden;
+		}
+
+		#capa3  {
+		  overflow: scroll;
+		}
+
+		#capa4  {
+		  overflow: auto;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="capa1">
+		<p><b>Capa 1</b>Lorem ipsum ad his scripta blandit, eum fastidii accumsa.</p>
+		<p>Ius id vidit volumus mandamus, vide veritus democritum te nec.</p>
+	</div>
+
+	<div id="capa2">
+		<p><b>Capa 2</b>Lorem ipsum ad his scripta blandit accumsan euripidis in, eum liber.</p>
+		<p>Ius id vidit volumus mandamus, vide veritus democritum te nec.</p>
+	</div>
+
+	<div id="capa3">
+		<p><b>Capa 3</b>Lorem ipsum ad his scripta fastidii accumsan euripidis in.</p>
+		<p>Ius id vidit volumus mandamus, vide veritus democritum.</p>
+	</div>
+
+	<div id="capa4">
+		<p><b>Capa 4</b>Lorem ipsum ad his scripta blandit.</p>
+		<p>Ius id vidit volumus mandamus, vide veritus.</p>
+	</div>
+
+</body>
+</html>
