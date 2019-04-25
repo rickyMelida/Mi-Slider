@@ -1,20 +1,14 @@
 #slider_princ {
 	width: 85%;
 	overflow: hidden;
+	margin: auto;
 }
 
 #slider_princ #slider_sec {
-	/*margin: 0 20%;*/
 	display: flex;
 	width: 300%;
 }
 
-.img {
+#slider_sec img {
 	width: 100%;
-}
-
-
-#img_1, #img_2, #img_3{
-	height: 300px;
-	width: 600px;
 }
