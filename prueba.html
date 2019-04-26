@@ -18,16 +18,17 @@
 		#parrafo_2 {
 			background: red;
 		}
-	
-		p:nth-child(2) {
-			color:yellow;
+		
+		div {
+			display: flex;
 		}
 
 	</style>
 </head>
 <body>
 	<h1>Titulo</h1>
-	<input type="button" value="Presioname!" class="button">
+	<input type="button" value="Izquierda" class="button" id="izquierda">
+	<input type="button" value="Derecha" id="derecha" class="button">
 	<div>
 		<p id="parrafo">Primer Parrafo</p>
 		<p id="parrafo_2">Segundo Parrafo</p>
@@ -38,12 +39,15 @@
 		var elemento_2 = $("#parrafo_2");
 		var elemento_3 = $("#parrafo_3");
 
-		$(".button").click(function() {
-			
+		/*Va a Izquierda*/
+		$("#izquierda").click(function() {
 			$("p:first").insertAfter("p:last");
-			$("p:nth-child(2)").css("color", "white");
 		});
 
+		/*Va a Derecha*/
+		$("#derecha").click(function() {
+			$("p:last").insertBefore("p:first");
+		});
 	</script>
 </body>
 </html>
