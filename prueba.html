@@ -19,22 +19,24 @@
 			background: red;
 		}
 
+
 	</style>
 </head>
 <body>
 	<h1>Titulo</h1>
 	<input type="button" value="Presioname!" class="button">
-	<p id="parrafo">Esto se va a mover</p>
-	<p id="parrafo_2"></p>
+	<p id="parrafo">Primer Parrafo</p>
+	<p id="parrafo_2">Segundo Parrafo</p>
+	<p id="parrafo_3">Tercer Parrafo</p>
 	<script>
 		var elemento = $("#parrafo");
 		var elemento_2 = $("#parrafo_2");
+		var elemento_3 = $("#parrafo_3");
 
 		$(".button").click(function() {
-			elemento.animate({marginLeft: "20%"}, 1000, function() {
-				elemento_2.css("background","blue");
-			});
-
+			
+			$("p:first").insertAfter("p:last");
+			$("body:nth-child(2)").css("color", "green");
 		});
 
 	</script>
