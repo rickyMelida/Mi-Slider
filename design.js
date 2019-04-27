@@ -20,8 +20,23 @@ $("input[name=Izquierda]").click(function() {
 });
 
 setInterval(function() {
-	$("#slider_sec").animate({marginLeft: 0 + "%"}, 2000, function() {
+	$("#slider_sec").animate({marginLeft: 0 + "%"}, 1000, function() {
         $("#slider_sec .img:last").insertBefore("#slider_sec .img:first");
         $("#slider_sec").css("margin-left", "-" + 100 + "%");
 	});
 }, 4000);
+
+
+/*
+	Una versión muy útil de git log esla siguiente, pues nos permite veren que lugares está
+master y HEAD, entre otras cosas:
+$ git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+
+Como estas órdenes son demasiado largas,Git nos permite crear alias para crear nuevas 
+órdenes parametrizadas. Para ello editaremos un archivo llamado 
+.gitconfig que está en nuestro $HOME y le añadiremos estas líneas al final:
+[alias]
+hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+*/
